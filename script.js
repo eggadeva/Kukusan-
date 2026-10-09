@@ -329,8 +329,8 @@ function renderAdminTables() {
       '<tr><td>' + o.date + '</td><td><strong>' + escapeHtml(o.name) + '</strong><br><small>' + escapeHtml(o.phone) +
       '</small></td><td>Rp ' + formatNumber(o.total) + '</td><td>' + o.status + '</td><td>' +
       '<button class="btn-sm btn-edit" onclick="viewOrder(' + o.id + ')">Detail</button> ' +
-      (o.status === 'Baru' ? '<button class="btn-sm btn-edit" onclick="updateOrderStatus(' + o.id + ',\\'Proses\\')">Proses</button>' : '') +
-      (o.status === 'Proses' ? '<button class="btn-sm btn-edit" onclick="updateOrderStatus(' + o.id + ',\\'Selesai\\')">Selesai</button>' : '') +
+      (o.status === 'Baru' ? '<button class="btn-sm btn-edit" onclick="updateOrderStatus(' + o.id + ', \'Proses\')">Proses</button>' : '') +
+      (o.status === 'Proses' ? '<button class="btn-sm btn-edit" onclick="updateOrderStatus(' + o.id + ', \'Selesai\')">Selesai</button>' : '') +
       '</td></tr>'
     ).join('') || '<tr><td colspan="5" style="text-align:center;color:#999;">Belum ada pesanan</td></tr>';
   }
